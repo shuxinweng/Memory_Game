@@ -3,7 +3,7 @@ import Images from './items/images';
 function App() {
   return (
     <div className="App">
-      <h1>Memory Game - React</h1>
+      <h1>WeChat Emoji - Memory Game</h1>
       <Images />
     </div>
 
