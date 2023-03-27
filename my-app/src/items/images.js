@@ -1,19 +1,26 @@
 import { useState } from 'react'
 import Image from './image'
 
+import whiteeye from './img/whiteeye.png';
+import doge from './img/doge.png';
+import Facepalm from './img/Facepalm.png';
+import hey from './img/hey.png';
+import NosePick from './img/NosePick.png';
+import shock from './img/shock.png';
+
 const defaultItems = [
-    { id: 1, img: '/img/whiteeye.png', stat: '', disable: false },
-    { id: 1, img: '/img/whiteeye.png', stat: '', disable: false },
-    { id: 2, img: '/img/doge.png', stat: '', disable: false },
-    { id: 2, img: '/img/doge.png', stat: '', disable: false },
-    { id: 3, img: '/img/Facepalm.png', stat: '', disable: false },
-    { id: 3, img: '/img/Facepalm.png', stat: '', disable: false },
-    { id: 4, img: '/img/hey.png', stat: '', disable: false },
-    { id: 4, img: '/img/hey.png', stat: '', disable: false },
-    { id: 5, img: '/img/NosePick.png', stat: '', disable: false },
-    { id: 5, img: '/img/NosePick.png', stat: '', disable: false },
-    { id: 6, img: '/img/shock.png', stat: '', disable: false },
-    { id: 6, img: '/img/shock.png', stat: '', disable: false }
+    { id: 1, img: whiteeye, stat: '', disable: false },
+    { id: 1, img: whiteeye, stat: '', disable: false },
+    { id: 2, img: doge, stat: '', disable: false },
+    { id: 2, img: doge, stat: '', disable: false },
+    { id: 3, img: Facepalm, stat: '', disable: false },
+    { id: 3, img: Facepalm, stat: '', disable: false },
+    { id: 4, img: hey, stat: '', disable: false },
+    { id: 4, img: hey, stat: '', disable: false },
+    { id: 5, img: NosePick, stat: '', disable: false },
+    { id: 5, img: NosePick, stat: '', disable: false },
+    { id: 6, img: shock, stat: '', disable: false },
+    { id: 6, img: shock, stat: '', disable: false }
   ].sort(() => Math.random() - 0.5);
   
   function Images() {
