@@ -37,7 +37,9 @@ const defaultItems = [
         const isAllCorrect = items.every(item => item.stat === 'correct');
         if (isAllCorrect) {
             // setIsGameCompleted(true);
-            alert(`Congratulations, you completed the game in ${turnCount} turns`);
+            setTimeout(() => {
+                alert(`Congratulations, you completed the game in ${turnCount} turns`);
+            }, 500);
         }
       } else {
         items[current].stat = 'wrong';
