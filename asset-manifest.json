@@ -1,14 +1,16 @@
 {
   "files": {
     "main.css": "/Memory_Game/static/css/main.a8f31795.css",
-    "main.js": "/Memory_Game/static/js/main.cd459cda.js",
+    "main.js": "/Memory_Game/static/js/main.4922065b.js",
     "static/media/background.png": "/Memory_Game/static/media/background.639e429f8079300d6b76.png",
+    "static/media/Facepalm.png": "/Memory_Game/static/media/Facepalm.c2d69de9cb746af62d3b.png",
+    "static/media/NosePick.png": "/Memory_Game/static/media/NosePick.2e58f60c0fe9f42f13d0.png",
     "index.html": "/Memory_Game/index.html",
     "main.a8f31795.css.map": "/Memory_Game/static/css/main.a8f31795.css.map",
-    "main.cd459cda.js.map": "/Memory_Game/static/js/main.cd459cda.js.map"
+    "main.4922065b.js.map": "/Memory_Game/static/js/main.4922065b.js.map"
   },
   "entrypoints": [
     "static/css/main.a8f31795.css",
-    "static/js/main.cd459cda.js"
+    "static/js/main.4922065b.js"
   ]
 }
