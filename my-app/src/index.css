@@ -9,10 +9,12 @@ html, body{
 
 body{
   font-family : 'Times New Roman', Times, serif;
-  background-color: #569597;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("/public/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1{
@@ -30,7 +32,7 @@ h1{
 }
 
 .image{
-  background-color: #c35655;
+  background-color: #7ba1a8;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +85,7 @@ h1{
   color: white;
   padding: 12px 24px;
   font-size: 18px;
-  /* border: none; */
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -95,29 +97,9 @@ h1{
   background-color: #065fb8;
 }
 
-.fade-out:not(.congratulations) {
-  animation-name: fadeOut;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-.congratulations {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity ease-in-out, transform ease-in-out;
-}
-
-.congratulations.show {
-  opacity: 1;
-  transform: translate(-50%, -70%);
+.turnCount{
+  color: #569597;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 6px;
 }
