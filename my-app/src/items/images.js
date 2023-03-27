@@ -21,6 +21,7 @@ const defaultItems = [
     const [prev, setPrev] = useState(-1);
     const [gameCount, setGameCount] = useState(0);
     const [selectedItems, setSelectedItems] = useState([]);
+    const [turnCount, setTurnCount] = useState(0);
   
     function check(current) {
       if (items[current].id === items[prev].id) {
@@ -45,6 +46,7 @@ const defaultItems = [
           setSelectedItems([]);
         }, 1000);
       }
+      setTurnCount(turnCount + 1);
     }
   
     function userclick(id) {
@@ -76,6 +78,7 @@ const defaultItems = [
       setPrev(-1);
       setSelectedItems([]);
       setGameCount(gameCount + 1);
+      setTurnCount(0);
     }
   
     return (
@@ -84,6 +87,7 @@ const defaultItems = [
             <Image key={`${gameCount}-${index}`} item={item} id={index} userclick={userclick}/>
           ))}
           <button className="new-game-button" onClick={restartGame}>New Game</button>
+          <div className="turnCount">Turn: {turnCount}</div>
         </div>
       )
 }
