@@ -22,6 +22,7 @@ const defaultItems = [
     const [gameCount, setGameCount] = useState(0);
     const [selectedItems, setSelectedItems] = useState([]);
     const [turnCount, setTurnCount] = useState(0);
+    // const [isGameCompleted, setIsGameCompleted] = useState(false);
   
     function check(current) {
       if (items[current].id === items[prev].id) {
@@ -32,6 +33,12 @@ const defaultItems = [
         setItems([...items]);
         setPrev(-1);
         setSelectedItems([]);
+
+        const isAllCorrect = items.every(item => item.stat === 'correct');
+        if (isAllCorrect) {
+            // setIsGameCompleted(true);
+            alert(`Congratulations, you completed the game in ${turnCount} turns`);
+        }
       } else {
         items[current].stat = 'wrong';
         items[prev].stat = 'wrong';
@@ -83,13 +90,15 @@ const defaultItems = [
   
     return (
         <div className="container">
-          { items.map((item, index) =>  (
-            <Image key={`${gameCount}-${index}`} item={item} id={index} userclick={userclick}/>
+          {items.map((item, index) => (
+            <Image key={`${gameCount}-${index}`} item={item} id={index} userclick={userclick} />
           ))}
-          <button className="new-game-button" onClick={restartGame}>New Game</button>
+          <button className="new-game-button" onClick={restartGame}>
+            New Game
+          </button>
           <div className="turnCount">Turn: {turnCount}</div>
         </div>
-      )
+      );
 }
 
 export default Images

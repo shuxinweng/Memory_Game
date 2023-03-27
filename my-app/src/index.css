@@ -94,3 +94,30 @@ h1{
 .new-game-button:active {
   background-color: #065fb8;
 }
+
+.fade-out:not(.congratulations) {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.congratulations {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity ease-in-out, transform ease-in-out;
+}
+
+.congratulations.show {
+  opacity: 1;
+  transform: translate(-50%, -70%);
+}
