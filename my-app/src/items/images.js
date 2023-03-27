@@ -29,7 +29,6 @@ const defaultItems = [
     const [gameCount, setGameCount] = useState(0);
     const [selectedItems, setSelectedItems] = useState([]);
     const [turnCount, setTurnCount] = useState(0);
-    // const [isGameCompleted, setIsGameCompleted] = useState(false);
   
     function check(current) {
       if (items[current].id === items[prev].id) {
@@ -43,7 +42,6 @@ const defaultItems = [
 
         const isAllCorrect = items.every(item => item.stat === 'correct');
         if (isAllCorrect) {
-            // setIsGameCompleted(true);
             setTimeout(() => {
                 alert(`Congratulations, you completed the game in ${turnCount} turns`);
             }, 500);
